@@ -1,0 +1,14 @@
+{
+  "name": "ai-news-hub",
+  "version": "1.0.0",
+  "description": "Personal AI News Dashboard for daily Portuguese and International AI news aggregation.",
+  "main": "scripts/fetch-feeds.mjs",
+  "type": "module",
+  "scripts": {
+    "fetch-news": "node scripts/fetch-feeds.mjs",
+    "start": "npx serve ."
+  },
+  "dependencies": {
+    "rss-parser": "^3.13.0"
+  }
+}

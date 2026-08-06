@@ -1,0 +1,82 @@
+[
+  {
+    "id": "openai-blog",
+    "name": "OpenAI News",
+    "url": "https://openai.com/news/rss.xml",
+    "category": "llm",
+    "lang": "en",
+    "icon": "🤖"
+  },
+  {
+    "id": "techcrunch-ai",
+    "name": "TechCrunch AI",
+    "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+    "category": "news",
+    "lang": "en",
+    "icon": "📰"
+  },
+  {
+    "id": "theverge-ai",
+    "name": "The Verge AI",
+    "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+    "category": "news",
+    "lang": "en",
+    "icon": "⚡"
+  },
+  {
+    "id": "huggingface",
+    "name": "Hugging Face Blog",
+    "url": "https://huggingface.co/blog/feed.xml",
+    "category": "opensource",
+    "lang": "en",
+    "icon": "🤗"
+  },
+  {
+    "id": "mit-tech-review",
+    "name": "MIT Tech Review AI",
+    "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed",
+    "category": "research",
+    "lang": "en",
+    "icon": "🏛️"
+  },
+  {
+    "id": "hackernews-ai",
+    "name": "Hacker News (AI)",
+    "url": "https://hnrss.org/newest?q=AI+OR+LLM+OR+GPT",
+    "category": "opensource",
+    "lang": "en",
+    "icon": "🟠"
+  },
+  {
+    "id": "canaltech-ia",
+    "name": "Canaltech IA",
+    "url": "https://canaltech.com.br/rss/inteligencia-artificial/",
+    "category": "news",
+    "lang": "pt",
+    "icon": "🇧🇷"
+  },
+  {
+    "id": "meiobit",
+    "name": "Meio Bit",
+    "url": "https://meiobit.com/feed/",
+    "category": "news",
+    "lang": "pt",
+    "icon": "💻"
+  },
+  {
+    "id": "manualdousuario",
+    "name": "Manual do Usuário",
+    "url": "https://manualdousuario.net/feed/",
+    "category": "news",
+    "lang": "pt",
+    "icon": "📘"
+  },
+  {
+    "id": "tecnoblog",
+    "name": "Tecnoblog",
+    "url": "https://tecnoblog.net/feed/",
+    "category": "news",
+    "lang": "pt",
+    "icon": "🚀"
+  }
+]

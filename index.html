@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Pulse — Daily AI News Hub</title>
+  <meta name="description" content="Seu hub diário de notícias sobre Inteligência Artificial com as principais fontes brasileiras e internacionais.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Favicon / Styling -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app" class="app-container">
+    
+    <!-- HEADER NAVBAR -->
+    <header class="header">
+      <div class="header-inner">
+        <div class="brand">
+          <div class="brand-icon">
+            <span class="pulse-dot"></span>
+            🧠
+          </div>
+          <div class="brand-text">
+            <h1 class="brand-title">AI Pulse</h1>
+            <span class="brand-subtitle">Hub Diário de Inteligência Artificial</span>
+          </div>
+        </div>
+
+        <!-- SEARCH BAR -->
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="searchInput" placeholder="Pesquisar notícias, LLMs, OpenAI, modelos..." autocomplete="off">
+          <kbd class="search-kbd">Ctrl K</kbd>
+          <button id="clearSearchBtn" class="clear-search-btn" title="Limpar busca" hidden>&times;</button>
+        </div>
+
+        <!-- ACTIONS -->
+        <div class="header-actions">
+          <button id="btnManageFeeds" class="btn btn-secondary">
+            <span>⚙️</span> Feeds
+          </button>
+          <button id="btnRefresh" class="btn btn-icon" title="Atualizar Notícias">
+            🔄
+          </button>
+        </div>
+      </div>
+
+      <!-- BARRA DE SUB-NAVEGAÇÃO E FILTROS -->
+      <div class="subnav">
+        <!-- Filtro de Idiomas -->
+        <div class="filter-group lang-filters">
+          <button class="filter-chip active" data-lang="all">🌍 Todos</button>
+          <button class="filter-chip" data-lang="pt">🇧🇷 PT-BR</button>
+          <button class="filter-chip" data-lang="en">🇺🇸 English</button>
+        </div>
+
+        <div class="subnav-divider"></div>
+
+        <!-- Filtro de Categorias -->
+        <div class="filter-group category-filters">
+          <button class="filter-chip active" data-category="all">✨ Tudo</button>
+          <button class="filter-chip" data-category="news">📰 Notícias</button>
+          <button class="filter-chip" data-category="llm">🤖 LLMs</button>
+          <button class="filter-chip" data-category="opensource">🤗 Open Source</button>
+          <button class="filter-chip" data-category="research">🏛️ Pesquisa</button>
+          <button class="filter-chip" data-category="bookmarks">🔖 Salvos (<span id="bookmarkCount">0</span>)</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- STATUS BAR / LAST UPDATED -->
+    <div class="status-bar">
+      <div class="status-info">
+        <span class="status-badge" id="statusLiveBadge">● Ao Vivo</span>
+        <span id="lastUpdatedText">Atualizado recentemente</span>
+      </div>
+      <div class="status-metrics">
+        <span id="articlesCount">Exibindo 0 notícias</span>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      
+      <!-- HERO TOP HIGHLIGHTS -->
+      <section id="heroSection" class="hero-section">
+        <h2 class="section-title">🔥 Destaques do Dia</h2>
+        <div id="heroGrid" class="hero-grid">
+          <!-- Renderizado via JavaScript -->
+        </div>
+      </section>
+
+      <!-- ALL NEWS GRID -->
+      <section class="news-section">
+        <div class="news-header">
+          <h2 class="section-title" id="feedTitle">Todas as Notícias</h2>
+          <div class="view-options">
+            <button id="viewGridBtn" class="icon-btn active" title="Visão em Grade">📱</button>
+            <button id="viewListBtn" class="icon-btn" title="Visão em Lista">📄</button>
+          </div>
+        </div>
+
+        <div id="newsGrid" class="news-grid view-grid">
+          <!-- Skeletons de carregamento -->
+          <div class="news-card-skeleton"></div>
+          <div class="news-card-skeleton"></div>
+          <div class="news-card-skeleton"></div>
+        </div>
+
+        <!-- ESTADO VAZIO -->
+        <div id="emptyState" class="empty-state" hidden>
+          <div class="empty-icon">🔍</div>
+          <h3>Nenhuma notícia encontrada</h3>
+          <p>Tente ajustar seus termos de busca ou remover alguns filtros aplicados.</p>
+          <button id="btnResetFilters" class="btn btn-primary">Limpar Filtros</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <p>AI Pulse Hub • Notícias agregadas automaticamente das principais fontes de IA.</p>
+        <p class="footer-links">
+          <a href="#" id="footerManageFeeds">Gerenciar Feeds</a> • 
+          <a href="https://github.com" target="_blank" rel="noopener">GitHub Actions Aggregator</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- MODAL DE GERENCIAMENTO DE FEEDS -->
+    <div id="feedsModal" class="modal-backdrop" hidden>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>⚙️ Gerenciar Feeds RSS</h2>
+          <button id="btnCloseModal" class="modal-close-btn">&times;</button>
+        </div>
+
+        <div class="modal-tabs">
+          <button class="modal-tab active" data-tab="globalFeeds">Fontes Padrão</button>
+          <button class="modal-tab" data-tab="customFeeds">Adicionar Feed URL</button>
+          <button class="modal-tab" data-tab="backupFeeds">Backup & Exportar</button>
+        </div>
+
+        <div class="modal-body">
+          <!-- TAB 1: FEEDS PADRÃO -->
+          <div id="tabGlobalFeeds" class="tab-pane active">
+            <p class="tab-description">Ative ou desative as fontes globais consolidadas diariamente:</p>
+            <div id="globalFeedsList" class="feeds-list">
+              <!-- Renderizado via JS -->
+            </div>
+          </div>
+
+          <!-- TAB 2: ADICIONAR FEED CUSTOMIZADO -->
+          <div id="tabCustomFeeds" class="tab-pane">
+            <p class="tab-description">Adicione uma URL de feed RSS para ser buscada diretamente no seu navegador:</p>
+            <form id="addFeedForm" class="add-feed-form">
+              <div class="form-group">
+                <label for="feedUrlInput">URL do Feed RSS / Atom:</label>
+                <input type="url" id="feedUrlInput" placeholder="https://exemplo.com/feed.xml" required>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="feedNameInput">Nome da Fonte:</label>
+                  <input type="text" id="feedNameInput" placeholder="Ex: Blog do IA" required>
+                </div>
+                <div class="form-group">
+                  <label for="feedLangSelect">Idioma:</label>
+                  <select id="feedLangSelect">
+                    <option value="pt">🇧🇷 Português</option>
+                    <option value="en">🇺🇸 Inglês</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary" id="btnAddFeedSubmit">Adicionar Feed</button>
+            </form>
+
+            <h3 class="sub-title">Seus Feeds Customizados</h3>
+            <div id="customFeedsList" class="feeds-list">
+              <!-- Renderizado via JS -->
+            </div>
+          </div>
+
+          <!-- TAB 3: BACKUP -->
+          <div id="tabBackupFeeds" class="tab-pane">
+            <p class="tab-description">Exporte ou importe suas preferências e feeds salvos:</p>
+            <div class="backup-actions">
+              <button id="btnExportSettings" class="btn btn-secondary">📥 Exportar Configurações (JSON)</button>
+              <label class="btn btn-secondary">
+                📤 Importar Configurações
+                <input type="file" id="importSettingsFile" accept=".json" style="display: none;">
+              </label>
+              <button id="btnResetAll" class="btn btn-danger">⚠️ Restaurar Padrões de Fábrica</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button id="btnSaveFeeds" class="btn btn-primary">Salvar e Atualizar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOAST NOTIFICATIONS -->
+    <div id="toastContainer" class="toast-container"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+name: Update AI News Feeds
+
+on:
+  schedule:
+    - cron: '0 6,18 * * *' # Executa às 06:00 e 18:00 UTC (diariamente)
+  workflow_dispatch: # Permite disparo manual via botão na aba Actions do GitHub
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Fetch and Process RSS Feeds
+        run: npm run fetch-news
+
+      - name: Commit and Push Updated News
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/news.json
+          if git diff --staged --quiet; then
+            echo "Nenhuma atualização de notícia detectada."
+          else
+            git commit -m "chore(data): atualização automática dos feeds de IA [skip ci]"
+            git push
+          fi
