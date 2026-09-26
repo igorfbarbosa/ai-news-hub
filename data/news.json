@@ -1,7 +1,67 @@
 {
-  "updatedAt": "2026-09-26T10:33:00.924Z",
+  "updatedAt": "2026-09-26T20:24:44.449Z",
   "totalArticles": 150,
   "articles": [
+    {
+      "id": "ZW1wcmVzYXMtZGUtaWEv",
+      "title": "Bill Gates cobra regras para empresas de IA",
+      "link": "https://tecnoblog.net/noticias/bill-gates-cobra-regras-para-empresas-de-ia/",
+      "snippet": "Gates defende participação maior dos governos na supervisão da tecnologia (foto: OnInnovation/Flickr) Resumo Bill Gates defendeu a criação de leis para regular o desenvolvimento de inteligência artificial nos Estados Unidos. Cofundador da Microsoft afirma que a autorregulação das...",
+      "pubDate": "2026-09-26T20:01:23.000Z",
+      "timestamp": 1790452883000,
+      "sourceId": "tecnoblog",
+      "sourceName": "Tecnoblog",
+      "sourceIcon": "🚀",
+      "category": "news",
+      "lang": "pt",
+      "imageUrl": "https://files.tecnoblog.net/wp-content/uploads/2026/02/4996836818_5ba57fa106_b-edited.jpg",
+      "readingTime": "1 min read"
+    },
+    {
+      "id": "LXRyYWluaW5nLXBhdXNl",
+      "title": "OpenAI pauses training of its ‘most capable models’",
+      "link": "https://www.theverge.com/ai-artificial-intelligence/1001049/openai-training-pause",
+      "snippet": "As reports of OpenAI's models breaking containment , hacking sites, and generally getting out of control pile up, the company has made the decision to pause training of its most powerful models. The decision was made after a model being tested within a sandbox exploited a loophol...",
+      "pubDate": "2026-09-26T16:34:59.000Z",
+      "timestamp": 1790440499000,
+      "sourceId": "theverge-ai",
+      "sourceName": "The Verge AI",
+      "sourceIcon": "⚡",
+      "category": "news",
+      "lang": "en",
+      "imageUrl": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/02/STK155_OPEN_AI_2025_CVirgiia_A.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+      "readingTime": "1 min read"
+    },
+    {
+      "id": "jYW4tdGFsay10by1pdC8",
+      "title": "I created an interactive digital avatar of myself — and you can talk to it",
+      "link": "https://techcrunch.com/2026/09/26/i-created-an-interactive-digital-avatar-of-myself-and-you-can-talk-to-it/",
+      "snippet": "After obtaining an interactive avatar and training it to discuss venture fraud, I have mixed feelings about making AI clones of ourselves.",
+      "pubDate": "2026-09-26T14:00:00.000Z",
+      "timestamp": 1790431200000,
+      "sourceId": "techcrunch-ai",
+      "sourceName": "TechCrunch AI",
+      "sourceIcon": "📰",
+      "category": "news",
+      "lang": "en",
+      "imageUrl": null,
+      "readingTime": "1 min read"
+    },
+    {
+      "id": "dlYi1hZHZlcnRpc2luZw",
+      "title": "Can Cloudflare CEO Matthew Prince save the web from AI?",
+      "link": "https://www.theverge.com/podcast/1000344/cloudflare-matthew-prince-google-zero-ai-web-advertising",
+      "snippet": "Today, I’m talking with Matthew Prince, who is CEO of Cloudflare. This episode is part of a two-part series on the future of business. Matthew last joined us on the show about two and a half years ago, at what we thought then was a wild pivot point for the internet — and now it t...",
+      "pubDate": "2026-09-26T14:00:00.000Z",
+      "timestamp": 1790431200000,
+      "sourceId": "theverge-ai",
+      "sourceName": "The Verge AI",
+      "sourceIcon": "⚡",
+      "category": "news",
+      "lang": "en",
+      "imageUrl": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/09/DCD_2026-09-26_Prince.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+      "readingTime": "1 min read"
+    },
     {
       "id": "ZXJlLWV2ZXJ5d2hlcmUv",
       "title": "At Meta Connect, the company’s smart glasses were everywhere",
@@ -1068,21 +1128,6 @@
       "readingTime": "1 min read"
     },
     {
-      "id": "1zbWFydC1nbGFzc2VzLw",
-      "title": "PrismML brings its tiny LLMs to Qualcomm-powered smart glasses",
-      "link": "https://techcrunch.com/2026/09/24/prismml-brings-its-tiny-llms-to-qualcomm-powered-smart-glasses/",
-      "snippet": "Prism's larger goal is open-weight AI that runs on devices and makes better use of the computing power they already have.",
-      "pubDate": "2026-09-24T19:00:42.000Z",
-      "timestamp": 1790276442000,
-      "sourceId": "techcrunch-ai",
-      "sourceName": "TechCrunch AI",
-      "sourceIcon": "📰",
-      "category": "news",
-      "lang": "en",
-      "imageUrl": null,
-      "readingTime": "1 min read"
-    },
-    {
       "id": "nZS1zdXBlcnZpbGxhaW4",
       "title": "Jensen Huang talks about AI and climate change like a supervillain",
       "link": "https://www.theverge.com/tech/1000140/jensen-huang-nvidia-ai-energy-climate-change-supervillain",
@@ -1128,21 +1173,6 @@
       "readingTime": "1 min read"
     },
     {
-      "id": "lLWFpLWZpbGVzeXN0ZW0",
-      "title": "Muse will apparently let you download its entire filesystem",
-      "link": "https://www.theverge.com/ai-artificial-intelligence/1000222/meta-muse-ai-filesystem",
-      "snippet": "A pair of developers say that with very little prompting, Meta's Muse will share its entire filesystem with you. Peter James and Jonny L. Saunders have said they both independently coaxed Muse into zipping up and sharing the entire contents of its root filesystem, Ubuntu system f...",
-      "pubDate": "2026-09-24T17:14:12.000Z",
-      "timestamp": 1790270052000,
-      "sourceId": "theverge-ai",
-      "sourceName": "The Verge AI",
-      "sourceIcon": "⚡",
-      "category": "news",
-      "lang": "en",
-      "imageUrl": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/09/STKB394_MUSE_AI_CVIRGINIA_A.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-      "readingTime": "1 min read"
-    },
-    {
       "id": "hY2FvLW5vLWVzcGFjby8",
       "title": "Google vai lançar satélite com IA para testar computação no espaço",
       "link": "https://tecnoblog.net/noticias/google-vai-lancar-satelite-com-ia-para-testar-computacao-no-espaco/",
@@ -1155,21 +1185,6 @@
       "category": "news",
       "lang": "pt",
       "imageUrl": "https://files.tecnoblog.net/wp-content/uploads/2024/05/capa-ia-google-2_tb.png",
-      "readingTime": "1 min read"
-    },
-    {
-      "id": "dGluY3QtbG9va2FsaWtl",
-      "title": "Muse sure looks a lot like OpenClaw",
-      "link": "https://www.theverge.com/report/1000180/muse-openclaw-instinct-lookalike",
-      "snippet": "We seem to be entering into an AI agent renaissance. Meta's new consumer-facing AI agent, Muse, topped the App Store charts soon after its release and has 600,000 daily active users in the US, by an Apptopia estimate. And AI agent platform Instinct, whose eponymous creator is fun...",
-      "pubDate": "2026-09-24T17:10:38.000Z",
-      "timestamp": 1790269838000,
-      "sourceId": "theverge-ai",
-      "sourceName": "The Verge AI",
-      "sourceIcon": "⚡",
-      "category": "news",
-      "lang": "en",
-      "imageUrl": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/09/268774_The_hottest_AI_agent_platforms_are_just_OpenClaw_CVirginia2.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
       "readingTime": "1 min read"
     },
     {
@@ -1305,21 +1320,6 @@
       "category": "news",
       "lang": "pt",
       "imageUrl": "https://files.tecnoblog.net/wp-content/uploads/2026/09/20260916_173249.jpg",
-      "readingTime": "1 min read"
-    },
-    {
-      "id": "bWVudG8tZGUtZGFkb3Mv",
-      "title": "Melhor VPN para iPhone: como blindar aplicativos e reduzir o rastreamento de dados",
-      "link": "https://tecnoblog.net/publieditoriais/melhor-vpn-para-iphone-como-blindar-aplicativos-e-reduzir-o-rastreamento-de-dados/",
-      "snippet": "NordVPN traz mais segurança na navegação online para o iPhone (imagem: divulgação/NordVPN) Resumo A utilização de uma VPN no iPhone é essencial para proteger os dados de usuários, uma vez que o ecossistema restrito da Apple não impede a interceptação de informações em conexões ab...",
-      "pubDate": "2026-09-24T14:30:00.000Z",
-      "timestamp": 1790260200000,
-      "sourceId": "tecnoblog",
-      "sourceName": "Tecnoblog",
-      "sourceIcon": "🚀",
-      "category": "news",
-      "lang": "pt",
-      "imageUrl": "https://files.tecnoblog.net/wp-content/uploads/2026/09/ios-br-7-1280x720-1.png",
       "readingTime": "1 min read"
     },
     {
